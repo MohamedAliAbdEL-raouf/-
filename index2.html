@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>تربيه ايجابيه</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section class="all">
+      <section class="header">
+        <div class="container">
+          <form id="form" action="" method="POST" name="myform">
+          <h3 style="color:white ; text-align: center; padding-top: 10px;">ادخل بياناتك</h3>
+          <div class="decoration"></div>
+          <div class="row p-4 m-auto">
+              <div class="row">
+                <div class="col">
+                <input type="text" class="form-control" onchange="onkeyupvalidName()"  placeholder="الاسم" aria-label="name" id="name" required>
+                <p id="nameError" class="font-weight-bold text-danger"></p>
+                <p id="namesuccess" class="font-weight-bold text-success"></p>
+              </div>
+              <div class="col">
+                <input type="number" class="form-control" onchange="onkeyupvalidphone()"  placeholder="رقم الهاتف" aria-label="phone" id="phone" required>
+                <p id="phoneError" class="font-weight-bold text-danger"></p>
+                <p id="phonesuccess" class="font-weight-bold text-success"></p>
+              </div></div>
+            </div>
+            <div class="row tt">
+              <div class="col ">
+                <input type="number" onchange="onkeyupvalidnationalid()" class="form-control" placeholder="الرقم القومي" aria-label="national-id" id="nationalId" required>
+                <p id="nationalIdError" class="font-weight-bold text-danger"></p>
+                <p id="nationalsuccess" class="font-weight-bold text-success"></p>
+              </div>
+              <div class="col ">
+                <input type="number" onchange="onkeyupvalidcode()" class="form-control" style="width:96% ;" placeholder="كودالخاص" aria-label="your-code" id="code" required>
+                <p id="codeError" class="font-weight-bold text-danger"></p>
+                <p id="codesuccess" class="font-weight-bold text-success"></p>
+              </div>
+              <div class="col">
+                <input type="number" style="width:94% ;" onchange="validAge()" class="form-control" placeholder="عمرك" aria-label="age" id="age" required>
+                <p id="ageError" class="font-weight-bold text-danger"></p>
+                <p id="agesuccess" class="font-weight-bold text-success"></p>
+              </div>
+          </div>
+      <section class="body">
+        <div class="container-floid">
+          <h3 style="color:white ; text-align: center; padding-top: 10px;">اجب علي الاسئله</h3>
+          <div class="decoration "></div>
+          <div class="row pt-3">
+            <div class="col-md-6 pt-2">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-center">السؤال الاول</h5>
+                  <p class="card-text text-center">هل يعتبر العنف من أساليب التهذيب الإيجابى ؟ </p>
+                   <div class="dropdown">
+                    <select class="btn btn-secondary dropdown-toggle" id="questionOne" >
+                      <option selected disabled id="answer" value="none">الاجابه</option>
+                      <option  value="نعم" id="yes"><a class="dropdown-item" href="#">نعم</a></option>
+                      <option  value="لا" ><a  id="no" class="dropdown-item" href="#">لا</a></option>
+                      <option  value="احيانا" ><a id="some-times" class="dropdown-item" href="#">احيانا</a></option>
+                  </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 pt-2">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-center">السؤال الثاني</h5>
+                  <p class="card-text text-center">	ما هي أهم أساليب التواصل الإيجابى بين الزوجين ؟</p>
+                  <div class="dropdown">
+                    <select class="btn btn-secondary dropdown-toggle" id="questionTwo" onchange="answerTwo()">
+                      <option selected disabled value="none">الاجابه</option>
+                      <option  value="يقولون كلام إيجابى فقط "  class="dropdown-item" >يقولون كلام إيجابى فقط </option>
+                      <option  value="يفكرون فى حل المشكله"  class="dropdown-item" >يفكرون فى حل المشكله</option>
+                      <option  value="يؤجلون حل المشكله"   class="dropdown-item" >يؤجلون حل المشكله</option>
+                  </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <button type="submit" onclick="inputData()"  class="btn btn-success p-1 ">حفظ</button>
+        </div>
+        <div class="col-md-6">
+          <button type="remove" onclick="exsit()" class="btn btn-danger p-1" id="deletePosition">الغاء</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  </form>
+  </div>
+  </section>
+  </section>
+  
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>

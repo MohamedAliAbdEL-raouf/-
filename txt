@@ -1,0 +1,65 @@
+// function validationName(){
+//     var regx = /^[A-Z][a-z]{1,4}$/
+//     if(regx.test(name.value)){
+//         return true
+//     }else{
+//         return false
+//     }
+// }
+
+// validationName()
+// console.log(validationName());
+
+// function saveUser(){
+//     if(validationName()){
+//         var user = {
+//             name:name.value,
+//             phone:phone.value
+//         }
+//     }if(name.value ==''){
+//         alert('sss')
+//     }
+//     else{
+//         alert('ddd')
+//     }
+
+//     console.log(user);
+// }
+// saveUser()
+
+
+
+// function saveUser(){
+//         var user = {
+//             name:name.value,
+//             phone:phone.value
+//         }
+//     console.log(user);
+// }
+// saveUser()
+
+// function inputDb(endPoint,method,data){
+//     fetch(`http://localhost:3000/${endPoint}`, {
+
+//         // Adding method type
+//         method: method,
+    
+//         // Adding body or contents to send
+//         body: JSON.stringify(data),
+    
+//         // Adding headers to the request
+//         headers: {
+//           "Content-type": "application/json; charset=UTF-8"
+//         }
+//       })
+    
+//         // Converting to JSON
+//         .then(response => response.json())
+    
+//         // Displaying results to console
+//         .then(obj => {
+//           if (obj.message == 'sucsess') {
+//             getDataFromApi()
+//           }
+//         });
+// }
